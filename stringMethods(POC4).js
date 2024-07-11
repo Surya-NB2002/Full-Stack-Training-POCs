@@ -45,3 +45,27 @@ console.log("Replaced string:", replacedStr); // Hello, World!
 // charAt() - to fetch a character at specific index
 let charAtIndex5 = str.charAt(5);
 console.log("Character at index 5:", charAtIndex5); // l
+
+//-------------------------------------------------------------------------------------------------------------------
+//Example program - palindrome checker
+
+function isPalindrome(str) {
+    str = str.toLowerCase();
+
+    let left = 0;
+    let right = str.length - 1;
+
+    while (left < right) {
+        if (str[left] !== str[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true; 
+}
+
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello"));   // Output: false
+console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+
