@@ -40,3 +40,22 @@ console.log("After splice(2, 1):", array); // [0,2,3,4,5]
 // indexOf() - to find index of any element
 let indexOfFour = array.indexOf(4);
 console.log("Index of 4:", indexOfFour); // 3
+
+//--------------------------------------------------------------------------------------------------------------------
+// Example program- to remove duplicate elements from array
+function removeDuplicates(arr) {
+    let uniqueArray = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (uniqueArray.indexOf(arr[i]) === -1) {
+            uniqueArray.push(arr[i]);
+        }
+    }
+
+    return uniqueArray;
+}
+
+let inputArray = [1, 2, 2, 3, 4, 4, 5];
+let result = removeDuplicates(inputArray);
+console.log(result); // Output: [1, 2, 3, 4, 5]
+
