@@ -56,7 +56,7 @@ class BinarySearchTree { // BST definition with manipulations & traversals
     }
   }
 
-  min(root) { // to find node with smallest value
+  min(root = this.root) { // to find node with smallest value
     if (!root.left) {
       return root.value;
     } else {
@@ -64,7 +64,7 @@ class BinarySearchTree { // BST definition with manipulations & traversals
     }
   }
 
-  max(root) { // to find node with largest value
+  max(root = this.root) { // to find node with largest value
     if (!root.right) {
       return root.value;
     } else {
@@ -102,7 +102,7 @@ class BinarySearchTree { // BST definition with manipulations & traversals
   // BST traversals
   // 1) Depth First Search (DFS) traversal types: inorder, preorder & postorder
   
-  inOrder(root) { // traverse order: left subtree, root, right subtree
+  inOrder(root = this.root) { // traverse order: left subtree, root, right subtree
     if (root) {
       this.inOrder(root.left);
       console.log(root.value);
@@ -110,7 +110,7 @@ class BinarySearchTree { // BST definition with manipulations & traversals
     }
   }
 
-  preOrder(root) { // traverse order: root, left subtree, right subtree
+  preOrder(root = this.root) { // traverse order: root, left subtree, right subtree
     if (root) {
       console.log(root.value);
       this.preOrder(root.left);
@@ -118,7 +118,7 @@ class BinarySearchTree { // BST definition with manipulations & traversals
     }
   }
 
-  postOrder(root) { // traverse order: left subtree, right subtree, root
+  postOrder(root = this.root) { // traverse order: left subtree, right subtree, root
     if (root) {
       this.postOrder(root.left);
       this.postOrder(root.right);
