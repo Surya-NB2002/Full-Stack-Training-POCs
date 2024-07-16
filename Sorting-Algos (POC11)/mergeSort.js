@@ -29,3 +29,4 @@ function merge(left, right) {
 
 let arr = [8,20,-2,4,-6]
 console.log("Merge Sort: ",mergeSort(arr)) // Merge Sort: [ -6, -2, 4, 8, 20 ]
+// time complexity: O(n log(n))
