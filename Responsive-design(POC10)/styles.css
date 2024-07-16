@@ -1,0 +1,32 @@
+/* responsive css media query demo */
+
+/* common styles for all devices in general*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0; /* initial color */
+    border: 1px solid #ccc;
+  }
+  
+  /* media query 1: when screen width >= 600px, apply below styling*/
+  @media (min-width: 600px) {
+    .container {
+      width: 80%; /* adjust width percentage to adapt dynamically */
+      margin: auto;
+      background-color: #d0e8f2; /* change to different shade of light blue for distinction*/
+    }
+  }
+  
+  /* media query 2: when screen width >= 900px, apply below styling */
+  @media (min-width: 900px) {
+    .container {
+      width: 60%; /* reduces width percentage */
+      background-color: #b0d4f0; /* another shade of light blue to differentiate from previous media query */
+    }
+  }
+  
